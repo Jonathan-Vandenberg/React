@@ -23,16 +23,16 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ]
-
+  // receive 'expense' from below
   const addExpenseHandler = (expense) => {
     console.log("In App.js")
     console.log(expense)
   }
 
   return (
+    // 'onAddExpense' is called from below
     <div>
-      <NewExpense onAddExpense={addExpenseHandler} /> // onAddExpense is called
-      from below
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   )
